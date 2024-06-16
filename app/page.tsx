@@ -10,7 +10,7 @@ const roadmap = [{}];
 export default function Home() {
   const copyText = () => {
     navigator.clipboard.writeText(
-      "7A9xBYGYFBG2zsiin2rhaKQ147Ejz3B4Sam4dJdpump"
+      "HW3s4qTcVBDgGcksr4Z5wgV8m6MaQt5EevMFBdPzpump"
     );
   };
   return (
