@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "🚀 $SOL² MOONSHOT",
-  description: "$SOL² IS GOING TO THE MOON 🚀. GET IN BEFORE 10Mil.",
+  title: "🚀 $DOXCAT MOONSHOT",
+  description: "$DOXCAT IS GOING TO THE MOON 🚀. GET IN BEFORE 10Mil.",
   icons: ["/"],
 };
 
