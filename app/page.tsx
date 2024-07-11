@@ -1,6 +1,9 @@
 "use client";
 
+import { Chart } from "@/components/chart";
 import { TelegramIcon, TwitterIcon } from "@/components/icons";
+import { MemeGallery } from "@/components/memes";
+import { Tokenomics } from "@/components/tokenomics";
 import { Clipboard } from "lucide-react";
 import Link from "next/link";
 
@@ -9,29 +12,29 @@ const roadmap = [{}];
 export default function Home() {
   const copyText = () => {
     navigator.clipboard.writeText(
-      "D7VKERteNUdTMpoJPA73hTkyiccjdqeLn2ckWHoJpump"
+      "CEMob6eUjVe4MWhcbs6ybNdTCcbU7Y4Yq736bLfLpump"
     );
   };
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <div className="flex flex-col gap-16 items-center">
-        <div className="text-3xl font-extrabold tracking-tight underline text-green-500">
-          🚀 $DOXCAT ROAD TO $10MIL
+    <main className="flex min-h-screen flex-col items-center ">
+      <div className="">
+        <div className="text-5xl text-center max-w-xl font-extrabold tracking-tight pb-2 pt-16">
+          <Link href={'https://dexscreener.com/solana/2tmgdrptmvkalqedddgn7oxaz6msnoz4elfu2g3uznr8'}>POV: You Faded Generational Wealth 3 Times This Month</Link>
         </div>
-        <div className="z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+        <div className="">
           <img
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-            src="/doxcat.webp"
-            alt="doxcat baby lets moon this"
+            className="h-full w-full rounded-md relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+            src="/POV.webp"
+            alt="$POV baby lets moon this"
             width={500}
             height={500}
           />
         </div>
         <div>
-          <div className="flex items-center gap-4">
-            <span className="text-lg font-bold">$DOXCAT TOKEN ADDRESS://</span>
-            <div className="px-4 flex gap-2 py-2 rounded-lg bg-gray-700">
-              <span>D7VKERteNUdTMpoJPA73hTkyiccjdqeLn2ckWHoJpump</span>
+          <div className="flex flex-col items-center gap-4 py-4">
+            <span className="text-lg font-bold">$POV TOKEN ADDRESS://</span>
+            <div className="px-4 flex gap-2 py-2 text-white rounded-lg bg-gray-700 ">
+              <span className="text-sm">CEMob6eUjVe4MWhcbs6ybNdTCcbU7Y4Yq736bLfLpump</span>
               <Clipboard
                 className="hover:scale-2 hover:cursor-pointer"
                 onClick={() => copyText()}
@@ -40,23 +43,34 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="py-16">
-        <div className="text-2xl font-extrabold">Follow the PUMP $$$</div>
-        <div className="grid grid-cols-2 py-4">
-          <Link href={"https://t.me/+d5Q7raH-na44ODhh"}>
-            <div className="h-12 w-12">
+      <div className="w-full h-[400px] pt-8">
+        <Chart />
+      </div>
+      <div className="pt-8">
+        <h3 className="text-2xl tracking-tight font-bold">A Bit About the Token</h3>
+        <Tokenomics />
+      </div>
+      <div className="py-4 shadow-lg my-16 border-2 bg-green-500 rounded-md px-8 flex flex-col sm:flex-row items-center gap-8 justify-center">
+        <div className="text-2xl font-extrabold">Join The Movement!</div>
+        <div className="grid grid-cols-2 py-4 gap-8 items-center">
+          <Link href={"https://t.me/POVCTO"} className="flex gap-2">
+            <div className="h-6 w-6">
               <TelegramIcon></TelegramIcon>
             </div>
             <div className="text-lg font-bold">Telegram</div>
           </Link>
-          <Link href={"https://x.com/DoxxedCatCTO"}>
-            <div className="h-12 w-12">
+          <Link href={"https://x.com/POVCATonSOL/"} className="flex gap-2">
+            <div className="h-6 w-6">
               <TwitterIcon></TwitterIcon>
             </div>
             <div className="text-lg font-bold">Twitter</div>
           </Link>
         </div>
+      </div>
+
+
+      <div className="py-8">
+        <MemeGallery />
       </div>
     </main>
   );
